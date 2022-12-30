@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 @WebServlet(name = "PlakaSorgu", value = "/PlakaSorgu")
 public class PlakaSorgu extends HttpServlet {
-int i=0;
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter printWriter = response.getWriter();
@@ -15,7 +15,7 @@ int i=0;
         String plakaNo = request.getParameter("plakaNo").toUpperCase();
         KayitCek kayitCek=new KayitCek();
         boolean check=true;
-        for ( i=0; i<kayitCek.getCarsTablosu().size(); i++){
+        for ( int i=0; i<kayitCek.getCarsTablosu().size(); i++){
          if (kayitCek.getCarsTablosu().get(i).getPlakaNo().equals(plakaNo)){
              check=false;
              printWriter.print("<html><head>");
