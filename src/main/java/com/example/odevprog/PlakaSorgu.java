@@ -14,8 +14,10 @@ int i=0;
         Araba araba=new Araba();
         String plakaNo = request.getParameter("plakaNo").toUpperCase();
         KayitCek kayitCek=new KayitCek();
+        boolean check=true;
         for ( i=0; i<kayitCek.getCarsTablosu().size(); i++){
          if (kayitCek.getCarsTablosu().get(i).getPlakaNo().equals(plakaNo)){
+             check=false;
              printWriter.print("<html><head>");
              printWriter.print("<title>Bigiler</title>");
              printWriter.print("</head>");
@@ -59,6 +61,10 @@ int i=0;
 
 
         }
+        if (check){
+            printWriter.println("Kayit Bulunamadi...");
+        }
+
 
 
     }
