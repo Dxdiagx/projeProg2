@@ -12,8 +12,10 @@ public class PlakaSorgu extends HttpServlet {
         PrintWriter printWriter = response.getWriter();
         response.setContentType("text/html");
         Araba araba=new Araba();
+
         String plakaNo = request.getParameter("plakaNo").toUpperCase();
         KayitCek kayitCek=new KayitCek();
+
         boolean check=true;
         for ( int i=0; i<kayitCek.getCarsTablosu().size(); i++){
          if (kayitCek.getCarsTablosu().get(i).getPlakaNo().equals(plakaNo)){
@@ -61,9 +63,13 @@ public class PlakaSorgu extends HttpServlet {
 
 
         }
-        if (check){
+        if (request.getParameter("plakaNo").equals("")){
+            printWriter.println("<h1 style=text-align:center;>Alanlari Doldurunuz...<h1>");
+        }
+        else if (check){
             printWriter.println("<h1 style=text-align:center;>Kayit Bulunamadi...<h1>");
         }
+
 
 
 
