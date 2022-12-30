@@ -17,7 +17,7 @@ margin-top:150px "id="form" method="get"
     <br>
     <label style="height: 50px; font-style: italic; font-size: large">Plaka No </label>
 <input type="text" name="plakaNo">
-<button class="btn btn-success" style="width: 180px; height: 40px"> Plaka Sorgula </button>
+<button class="btn btn-success" style="width:180px; height:40px"> Plaka Sorgula </button>
 </form>
 <br/>
 </body>

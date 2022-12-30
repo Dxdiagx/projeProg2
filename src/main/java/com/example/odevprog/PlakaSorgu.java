@@ -17,24 +17,40 @@ int i=0;
         KayitCek kayitCek=new KayitCek();
         for ( i=0; i<kayitCek.getCarsTablosu().size(); i++){
          if (kayitCek.getCarsTablosu().get(i).getPlakaNo().equals(plakaNo)){
-             printWriter.println("Plaka No : "+kayitCek.getCarsTablosu().get(i).getPlakaNo());
-             printWriter.println("Arac Sahibinin Adi : "+kayitCek.getCarsTablosu().get(i).getAracSahibiAdı());
-             printWriter.println("Arac Sahibinin Soyadi : "+kayitCek.getCarsTablosu().get(i).getAracSahibiSoyAdı());
-             printWriter.println("Aracin Markasi : "+kayitCek.getCarsTablosu().get(i).getAracMarka());
-             printWriter.println("Aracin Modeli : "+kayitCek.getCarsTablosu().get(i).getAracModel());
-             printWriter.println("Aracin Model Yili : "+kayitCek.getCarsTablosu().get(i).getAracYıl());
-             printWriter.println("Aracin Rengi : "+kayitCek.getCarsTablosu().get(i).getAracRenk());
-
+             printWriter.print("<html><head>");
+             printWriter.print("<title>Bigiler</title>");
+             printWriter.print("</head>");
+             printWriter.print("<body>");
+             printWriter.print("<table border=2;>");
+             printWriter.print("<tr>");
+             printWriter.print("<td>Plaka No</td>");
+             printWriter.print("<td>Arac Sahibinin Adi</td>");
+             printWriter.print("<td>Arac Sahibinin Soyadi</td>");
+             printWriter.print("<td>Aracin Markasi</td>");
+             printWriter.print("<td>Aracin Modeli</td>");
+             printWriter.print("<td>Aracin Model Yili</td>");
+             printWriter.print("<td>Aracin Rengi</td>");
+             printWriter.print("</tr>");
+             printWriter.print("<tr>");
+             printWriter.print("<td>"+kayitCek.getCarsTablosu().get(i).getPlakaNo()+"</td");
+             printWriter.print("</tr>");
+             printWriter.print("<td>"+kayitCek.getCarsTablosu().get(i).getAracSahibiAdı()+"</td");
+             printWriter.print("</tr>");
+             printWriter.print("<td>"+kayitCek.getCarsTablosu().get(i).getAracSahibiSoyAdı()+"</td");
+             printWriter.print("</tr>");
+             printWriter.print("<td>"+kayitCek.getCarsTablosu().get(i).getAracMarka()+"</td");
+             printWriter.print("</tr>");
+             printWriter.print("<td>"+kayitCek.getCarsTablosu().get(i).getAracModel()+"</td");
+             printWriter.print("</tr>");
+             printWriter.print("<td>"+kayitCek.getCarsTablosu().get(i).getAracYıl()+"</td");
+             printWriter.print("</tr>");
+             printWriter.print("<td>"+kayitCek.getCarsTablosu().get(i).getAracRenk()+"</td");
+             printWriter.print("</tr>");
+             printWriter.print("</table>");
+             printWriter.print("</body></html>");
          }
-            printWriter.print("<html><head>");
-            printWriter.print("<title>Servlet Ekran</title>");
-            printWriter.print("</head>");
-            printWriter.print("<body>");
-            printWriter.print("<h2>Get() Methodu bilgileri</h2>");
-            printWriter.print("<h2>Girilen kullanıcı bilgileri</h2>");
-            printWriter.print("<h3> username: "+"Samet"+"</h3>");
-            printWriter.print("<h3> pasword: "+"Acar"+"</h3>");
-            printWriter.print("</body></html>");
+
+
         }
 
 
