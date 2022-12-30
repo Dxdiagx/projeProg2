@@ -62,7 +62,7 @@ public class PlakaSorgu extends HttpServlet {
 
         }
         if (check){
-            printWriter.println("Kayit Bulunamadi...");
+            printWriter.println("<h1 style=text-align:center;>Kayit Bulunamadi...<h1>");
         }
 
 
