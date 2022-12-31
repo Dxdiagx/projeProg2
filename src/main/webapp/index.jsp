@@ -11,8 +11,7 @@
 </title>
 <br/>
 <form action="PlakaSorgu" style="text-align: center;
-margin-top:150px "id="form" method="get"
-      action="index.jsp" class="form-horizontal">
+margin-top:150px "id="form" method="get" class="form-horizontal">
 <h1>Plaka Sorgulama Hizmeti</h1>
     <br>
     <label style="height: 50px; font-style: italic; font-size: large">Plaka No </label>
